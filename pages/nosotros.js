@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function Nosotros() {
   return (
-    <Layout>
+    <Layout
+      title={"Nosotros"}
+      description={"Sobre nosotros, guitarLA, tienda de música"}
+    >
       <div>nosotros</div>
       <Link href="/">Home</Link>
     </Layout>
