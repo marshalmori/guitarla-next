@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Inter } from "@next/font/google";
 import Layout from "@/components/layout";
 
@@ -12,7 +11,6 @@ export default function Home() {
         description={"Blog de música, venta de guitarras y más"}
       >
         <h1>Home</h1>
-        <Link href="/nosotros">Nosotros</Link>
       </Layout>
     </>
   );

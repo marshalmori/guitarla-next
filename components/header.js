@@ -5,7 +5,7 @@ import styles from "@/styles/header.module.css";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <div className="contenedor">
+      <div className={`contenedor ${styles.barra}`}>
         <Image
           src={"img/logo.svg"}
           width={300}
@@ -13,7 +13,7 @@ export default function Header() {
           alt={"Logotipo da GuitarLA"}
         />
 
-        <nav>
+        <nav className={styles.navegacion}>
           <Link href="/">Inicio</Link>
           <Link href="/nosotros">Nosotros</Link>
           <Link href="/blog">Blog</Link>
