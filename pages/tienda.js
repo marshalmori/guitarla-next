@@ -7,13 +7,24 @@ export default function Tienda({ guitarras }) {
     <Layout title={"Tienda Virtual"} description={"Tienda Virtual, guitarLA"}>
       <main className="contenedor">
         <h1 className="heading">Nuestra Colección</h1>
-        <ListadoGuitarras />
+        <ListadoGuitarras guitarras={guitarras} />
       </main>
     </Layout>
   );
 }
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   const respuesta = await fetch(
+//     `${process.env.API_URL}/guitarras?populate=imagen`
+//   );
+//   const { data: guitarras } = await respuesta.json();
+
+//   return {
+//     props: { guitarras },
+//   };
+// }
+
+export async function getServerSideProps() {
   const respuesta = await fetch(
     `${process.env.API_URL}/guitarras?populate=imagen`
   );
