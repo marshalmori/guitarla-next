@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import ListadoGuitarras from "@/components/listado-guitarras";
+import Guitarra from "@/components/guitarra";
 
 export default function Tienda({ guitarras }) {
   //guitarras vem direto da função getStaticProps
@@ -7,7 +7,9 @@ export default function Tienda({ guitarras }) {
     <Layout title={"Tienda Virtual"} description={"Tienda Virtual, guitarLA"}>
       <main className="contenedor">
         <h1 className="heading">Nuestra Colección</h1>
-        <ListadoGuitarras guitarras={guitarras} />
+        {guitarras?.map((guitarra) => (
+          <Guitarra key={guitarra.id} guitarra={guitarra.attributes} />
+        ))}
       </main>
     </Layout>
   );
