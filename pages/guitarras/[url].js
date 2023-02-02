@@ -1,6 +1,32 @@
+import Image from "next/image";
+import styles from "@/styles/guitarras.module.css";
+import Layout from "@/components/layout";
+
 // {guitarra} veio do getServerSideProps
 export default function Producto({ guitarra }) {
-  return <div>Producto</div>;
+  const { nombre, descripcion, imagen, precio } = guitarra[0].attributes;
+
+  return (
+    <Layout
+      title={`Guitarra ${nombre}`}
+      description={"Tienda Virtual, guitarLA"}
+    >
+      <div className={styles.guitarra}>
+        <Image
+          src={imagen.data.attributes.url}
+          alt={`Imagen guitarra ${nombre}`}
+          width={600}
+          height={400}
+        />
+
+        <div className={styles.contenido}>
+          <h3>{nombre}</h3>
+          <p className={styles.descripcion}>{descripcion}</p>
+          <p className={styles.precio}>${precio}</p>
+        </div>
+      </div>
+    </Layout>
+  );
 }
 
 export async function getStaticPaths() {

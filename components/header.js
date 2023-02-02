@@ -11,7 +11,7 @@ export default function Header() {
       <div className={`contenedor ${styles.barra}`}>
         <Link href={"/"}>
           <Image
-            src={"img/logo.svg"}
+            src={"/img/logo.svg"}
             width={300}
             height={40}
             alt={"Logotipo da GuitarLA"}
