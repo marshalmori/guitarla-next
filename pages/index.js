@@ -11,7 +11,7 @@ export default function Home() {
         title={"Home"}
         description={"Blog de música, venta de guitarras y más"}
       >
-        <h1>Marshal in Next</h1>
+        <h1>Home</h1>
         <Link href="/nosotros">Nosotros</Link>
       </Layout>
     </>
