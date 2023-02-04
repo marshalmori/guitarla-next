@@ -15,6 +15,15 @@ export default function Producto({ guitarra }) {
       alert("Cantidad no válida");
       return;
     }
+
+    // Construir um objeto para LocalStorage
+    const guitarraSeleccionada = {
+      id: guitarra[0].id,
+      imagen: imagen.data.attributes.url,
+      nombre,
+      precio,
+      cantidad,
+    };
   };
 
   return (
