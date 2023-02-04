@@ -26,6 +26,9 @@ export default function Carrito({ carrito }) {
                     </div>
                     <div>
                       <p className={styles.nombre}>{producto.nombre}</p>
+
+                      <p>Cantidad: {producto.cantidad}</p>
+
                       <p className={styles.precio}>
                         $<span>{producto.precio}</span>
                       </p>
