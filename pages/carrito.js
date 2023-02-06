@@ -3,7 +3,11 @@ import Image from "next/image";
 import Layout from "@/components/layout";
 import styles from "../styles/carrito.module.css";
 
-export default function Carrito({ carrito, actualizarCantidad }) {
+export default function Carrito({
+  carrito,
+  actualizarCantidad,
+  eliminarProducto,
+}) {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -65,6 +69,13 @@ export default function Carrito({ carrito, actualizarCantidad }) {
                         <span>{producto.cantidad * producto.precio}</span>
                       </p>
                     </div>
+                    <button
+                      className={styles.eliminar}
+                      type="button"
+                      onClick={() => eliminarProducto(producto.id)}
+                    >
+                      X
+                    </button>
                   </div>
                 ))}
           </div>
